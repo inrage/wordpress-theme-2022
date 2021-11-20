@@ -1,0 +1,34 @@
+@import "../tools/functions";
+
+.reinsurance-item {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__icon {
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: space(18);
+    height: space(18);
+
+    > svg {
+      width: space(5);
+    }
+  }
+
+  &__number {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: space(2);
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

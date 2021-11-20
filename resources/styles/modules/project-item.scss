@@ -1,0 +1,47 @@
+@import "../tools/functions";
+
+.project-item {
+  display: block;
+  text-align: center;
+
+  &__cover {
+    display: block;
+    margin-bottom: space(2);
+
+    @media (min-width: 769px) {
+      padding: 5% 10% 7%;
+      margin-bottom: 0;
+
+      > img {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover {
+        > img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: var(--color-white);
+
+    @media (min-width: 769px) {
+      font-size: 24px;
+    }
+  }
+
+  &__category {
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @media (min-width: 769px) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "styles": {
+    "elements": {
+      "h2": {
+        "color": {
+          "text": "var(--color-white)"
+        }
+      }
+    },
+    "color": {
+      "text": "var(--color-default)",
+      "background": "var(--color-dark)"
+    }
+  },
+  "settings": {
+    "typography": {
+      "customFontSize": false,
+      "dropCap": false,
+      "fontSizes": [
+        {
+          "name": "Petite (14px)",
+          "slug": "small",
+          "size": "14px"
+        },
+        {
+          "name": "Grande (18px)",
+          "slug": "large",
+          "size": "18px"
+        },
+        {
+          "name": "Très grande (20px)",
+          "slug": "huge",
+          "size": "20px"
+        },
+        {
+          "name": "Gros titre",
+          "slug": "title",
+          "size": "28px"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "var(--container-width)"
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "Défault",
+          "slug": "default",
+          "color": "var(--color-default)"
+        },
+        {
+          "name": "Gris clair",
+          "slug": "lighter",
+          "color": "var(--color-lighter)"
+        },
+        {
+          "name": "Darker",
+          "slug": "darker",
+          "color": "var(--color-darker)"
+        },
+        {
+          "name": "Blanc",
+          "slug": "white",
+          "color": "var(--color-white)"
+        },
+        {
+          "name": "Orange",
+          "slug": "primary",
+          "color": "var(--color-orange)"
+        }
+      ]
+    }
+  }
+}

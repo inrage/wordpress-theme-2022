@@ -1,0 +1,179 @@
+@import "../tools/functions";
+@import "button";
+
+.wpcf7 {
+  margin: space(5) 0;
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &-response-output {
+    border: 2px solid var(--color-orange);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(230 126 34 / 60%);
+    padding: 16px 1em;
+    background-color: var(--color-dark);
+    margin: 2em 0 space(5);
+
+    .wpcf7-form.invalid & {
+      color: var(--color-orange);
+    }
+
+    .wpcf7-form.sent &,
+    .wpcf7-form.init & {
+      display: none;
+    }
+  }
+
+  &-not-valid-tip {
+    position: absolute;
+    top: 50%;
+    right: space(1);
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #dc3232;
+  }
+
+  &-spinner {
+    visibility: hidden;
+    transition: visibility 0.2s linear;
+  }
+
+  &-submit {
+    @extend .wp-block-button__link;
+
+    transition: padding-right 0.2s linear;
+
+    &:hover {
+      color: var(--color-white);
+    }
+
+    .wpcf7-form.submitting & {
+      padding-right: space(6) !important;
+
+      & + .wpcf7-spinner {
+        display: inline-block;
+        visibility: visible;
+        background-color: var(--color-darker);
+        opacity: .75;
+        width: 24px;
+        height: 24px;
+        border: none;
+        border-radius: 100%;
+        padding: 0;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: var(--color-orange);
+          top: 4px;
+          left: 4px;
+          width: 6px;
+          height: 6px;
+          border: none;
+          border-radius: 100%;
+          transform-origin: 8px 8px;
+          animation-name: spin;
+          animation-duration: 1000ms;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &-bottom {
+    text-align: center;
+    position: relative;
+    margin-top: space(2);
+
+    @media (min-width: 769px) {
+      text-align: right;
+      margin-top: space(0);
+    }
+  }
+
+  &-form-control-wrap {
+    display: block;
+    position: relative;
+
+    input[type="email"],
+    input[type="tel"],
+    input[type="text"],
+    textarea {
+      border: 1px solid #999;
+      font-size: 16px;
+      background: transparent;
+      line-height: 24px;
+      color: #999;
+      padding: space(2) space(3);
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      &:active,
+      &:focus {
+        border-color: var(--color-orange);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(230 126 34 / 60%);
+        outline: 0;
+      }
+
+      &::placeholder {
+        color: darken(#999, 20%);
+      }
+
+      &.wpcf7-not-valid {
+        box-shadow: inset 0 1px 1px rgb(255 0 0 / 8%), 0 0 8px rgb(255 0 0 / 60%);
+        border-color: red;
+      }
+    }
+
+    &.your-message {
+
+      @media (min-width: 769px) {
+        grid-column: 2;
+        grid-row: 1/4;
+        height: auto;
+      }
+
+      > textarea {
+        &.wpcf7-not-valid {
+          & + .wpcf7-not-valid-tip {
+            top: -16px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 769px) {
+      &.acceptance-999 {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .screen-reader-response {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    word-wrap: normal!important;
+  }
+}

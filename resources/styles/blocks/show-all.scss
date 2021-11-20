@@ -1,0 +1,65 @@
+@import "../tools/functions";
+
+.wp-block-show-all {
+  position: relative;
+  margin-top: -90px;
+
+  --show-all-outer-bg: var(--color-dark);
+  --show-all-push-bg: var(--color-darker);
+
+  &__diag {
+    width: 100%;
+    display: block;
+  }
+
+  &__bg {
+    fill: var(--show-all-outer-bg);
+  }
+
+  &__push {
+    fill: var(--show-all-push-bg);
+  }
+
+  &__cta {
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 24px;
+    text-align: center;
+    width: 160px;
+    background: var(--color-dark);
+    border-radius: 50%;
+    height: 160px;
+    color: #7c7c7c;
+    line-height: 1.2;
+    transition: color 250ms;
+
+    > svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin-bottom: space(1);
+    }
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  $positions: outer, push;
+  $colors: dark, darker, orange;
+
+  @each $pos in $positions {
+    &--#{$pos} {
+      @each $color in $colors {
+        &--#{$color} {
+          --show-all-#{$pos}-bg: var(--color-#{$color});
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "../tools/functions";
+
+.push-diag {
+  --push-diag-bg: var(--color-darker);
+  --push-diag-outer-top-bg: var(--color-dark);
+  --push-diag-outer-bottom-bg: var(--color-dark);
+  --push-diag-corner-color: var(--color-orange);
+
+  background: var(--push-diag-bg) no-repeat center;
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    margin-left: space(-2);
+    margin-right: space(-2);
+  }
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    display: block;
+
+    @media (max-width: 768px) {
+      height: auto;
+    }
+  }
+
+  &__top {
+    transform: scale(-1);
+
+    &-bg {
+      fill: var(--push-diag-outer-top-bg);
+    }
+
+    &-corner {
+      fill: var(--push-diag-corner-color);
+    }
+  }
+
+  &__bottom {
+    &-bg {
+      fill: var(--push-diag-outer-bottom-bg);
+    }
+
+    &-corner {
+      fill: var(--push-diag-corner-color);
+    }
+  }
+
+  &__content {
+    @media (min-width: 769px) {
+      margin-top: -48px;
+      margin-bottom: -48px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  $positions: top, bottom;
+  $colors: dark, darker;
+
+  @each $pos in $positions {
+    &--#{$pos} {
+      @each $color in $colors {
+        &--#{$color} {
+          --push-diag-outer-#{$pos}-bg: var(--color-#{$color});
+        }
+      }
+    }
+  }
+}

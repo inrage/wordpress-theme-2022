@@ -1,0 +1,22 @@
+@import "../common/variables";
+
+.wp-block-query-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: space(3) 0;
+  grid-gap: space(4);
+
+  @for $i from 1 through 8 {
+    &--#{$i} {
+      @if $i > 2 {
+        grid-template-columns: repeat(2, 1fr);
+      } @else {
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 769px) {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
+    }
+  }
+}

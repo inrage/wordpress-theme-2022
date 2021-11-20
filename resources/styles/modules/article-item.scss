@@ -1,0 +1,68 @@
+@import "../tools/functions";
+@import "../modules/link-arrow";
+
+.article-item {
+  margin: space(5) 0;
+
+  &__top {
+    position: relative;
+  }
+
+  &__date {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .date {
+      background-color: #fff;
+      width: space(8);
+      text-align: center;
+
+      &__day,
+      &__month {
+        text-transform: uppercase;
+        color: var(--color-darker);
+      }
+
+      &__day {
+        font-size: 32px;
+        font-weight: 400;
+        height: space(8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-orange);
+      }
+
+      &__month {
+        line-height: space(4);
+      }
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 24px;
+    min-height: space(9);
+    margin: space(2) 0 0;
+  }
+
+  &__cover {
+    > a {
+      display: block;
+
+      > img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  &__excerpt {
+    margin-bottom: space(3);
+    line-height: 1.3;
+    margin-top: space(1);
+  }
+}

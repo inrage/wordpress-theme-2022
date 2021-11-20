@@ -1,0 +1,36 @@
+:root {
+  --container-padding: calc(2 * var(--space));
+  --container-width: calc(100vw - var(--container-padding) * 2);
+}
+
+@media only screen and (min-width: 1370px) {
+  :root {
+    --container-width: 1232px;
+  }
+}
+
+// Container
+// ==============
+%container,
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: calc(50% - var(--container-width) / 2);
+  padding-right: calc(50% - var(--container-width) / 2);
+}
+
+.alignfull,
+%fullsize,
+.fullsize {
+  margin-left: space(-2);
+  margin-right: space(-2);
+
+  @media (min-width: 850px) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}

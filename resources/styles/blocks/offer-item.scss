@@ -1,0 +1,76 @@
+.offer-item {
+  @apply py-4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 16px;
+
+  @media (min-width: 600px) {
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .wp-block-columns .wp-block-column & {
+    height: 100%;
+  }
+
+  &__text {
+    @apply mb-2;
+
+    flex: 1;
+  }
+
+  &__top {
+    flex: none;
+
+    @media (max-width: 600px) {
+      @apply mb-3;
+
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__image {
+    @media (max-width: 600px) {
+      @apply mr-2;
+
+      width: 88px;
+      height: 88px;
+    }
+  }
+
+  &__title {
+    @apply mt-1 md:mt-2 mb-1;
+
+    color: var(--color-white);
+    font-size: 20px;
+  }
+
+  &__cta {
+    @apply mt-auto;
+
+    flex: none;
+
+    a {
+      color: var(--color-dark);
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-flex;
+      background-color: var(--color-orange);
+      position: relative;
+      padding: 8px 16px;
+      transition: all 250ms ease-in-out;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--color-oranger);
+        color: var(--color-white);
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../tools/functions";
+
+.link-arrow {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  padding-right: space(4);
+  transition: color 250ms;
+
+  > svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-orange);
+  }
+
+  &:hover {
+    color: var(--color-orange);
+
+    > svg {
+      animation: readmoreAnimated infinite 1s;
+    }
+  }
+}
+
+@keyframes readmoreAnimated {
+  from {
+    right: 0;
+  }
+
+  50% {
+    right: 5px;
+  }
+
+  to {
+    right: 0;
+  }
+}

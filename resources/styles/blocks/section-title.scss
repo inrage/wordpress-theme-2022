@@ -1,0 +1,44 @@
+.section-title {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+
+  &__title {
+    flex: none;
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+  }
+
+  &__content {
+    margin: 0;
+    font-size: 18px;
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    @media (max-width: 850px) {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    &::before {
+      display: none;
+
+      @media (min-width: 850px) {
+        width: 2px;
+        height: 120px;
+        background-color: #999;
+        content: "";
+        display: block;
+        transform: skewX(-35deg);
+        margin: 0 70px;
+        flex: none;
+      }
+    }
+  }
+}

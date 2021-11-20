@@ -1,0 +1,36 @@
+@import "../tools/functions";
+
+.wp-block-job-item {
+  padding: space(4) 0;
+}
+
+.job-item {
+  display: grid;
+  grid-template-columns: 216px auto;
+  grid-gap: 0 space(3);
+
+  &__logo {
+    grid-row: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__title {
+    color: var(--color-white) !important;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  &__company {
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    margin-top: space(2);
+  }
+}

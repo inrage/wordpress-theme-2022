@@ -1,0 +1,15 @@
+// Variables
+// ==================
+:root {
+  --color-dark: #252525;
+  --color-darker: #141414;
+  --color-default: #999;
+  --color-lighter: #b3b3b3;
+  --color-white: #fff;
+  --color-orange: #e57e21;
+  --color-oranger: #8f4d11;
+  --title-color: var(--color-white);
+  --space: 8px;
+}
+
+@import "../tools/functions";

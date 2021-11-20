@@ -1,0 +1,15 @@
+@import "common/variables";
+@import "common/layout";
+
+.block-editor-block-list__layout {
+  @apply font-sans;
+}
+
+.wp-block {
+  &.editor-post-title__block .editor-post-title__input {
+    @apply font-sans #{!important};
+  }
+}
+
+// Core block override
+@import "./blocks/button";

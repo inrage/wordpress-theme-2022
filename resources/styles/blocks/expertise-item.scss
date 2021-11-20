@@ -1,0 +1,25 @@
+@import "../tools/functions";
+@import "../modules/link-arrow";
+
+.expertise-item {
+  display: flex;
+  align-items: center;
+  margin: space(5) 0;
+
+  &__image {
+    flex: none;
+    margin-right: space(2);
+  }
+
+  &__text {
+    margin-bottom: space(1);
+  }
+
+  &__title {
+    color: #fff !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    margin-bottom: space(1) !important;
+  }
+}
