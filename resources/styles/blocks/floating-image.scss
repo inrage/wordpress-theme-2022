@@ -1,0 +1,26 @@
+@import "../tools/functions";
+
+.wp-block-floating-image {
+  margin-left: 40%;
+  position: relative;
+  padding: space(15) 0;
+  padding-left: space(5);
+
+  &--first {
+    margin-top: space(-15);
+
+    body.wp-admin & {
+      margin-top: 0;
+    }
+  }
+
+  &__float {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+}
