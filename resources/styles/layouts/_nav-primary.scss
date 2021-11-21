@@ -1,7 +1,9 @@
 .nav-primary {
+  // level 0
   > ul.nav {
     display: flex;
     align-items: center;
+    position: relative;
 
     > li {
       > a {
@@ -25,6 +27,51 @@
 
           &:hover {
             color: #fff;
+          }
+        }
+      }
+
+      // level 1
+      > ul {
+        background: rgba(#141414, 0.9);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        display: flex;
+        border-top: 4px solid var(--color-orange);
+        padding: space(2) space(2);
+        padding-bottom: space(3);
+        z-index: 20;
+
+        > li {
+          > a {
+            color: var(--color-white);
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+
+          & + li {
+            margin-left: space(4);
+          }
+
+          // level 2
+          > ul {
+            list-style: square;
+            margin-left: space(2);
+            margin-top: space(1);
+
+            > li {
+              font-size: 14px;
+
+              &::marker {
+                color: var(--color-oranger);
+              }
+
+              > a {
+                color: var(--color-orange);
+              }
+            }
           }
         }
       }
