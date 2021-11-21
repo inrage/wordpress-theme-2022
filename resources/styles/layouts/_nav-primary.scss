@@ -1,0 +1,33 @@
+.nav-primary {
+  > ul.nav {
+    display: flex;
+    align-items: center;
+
+    > li {
+      > a {
+        color: var(--color-white);
+        text-transform: uppercase;
+        font-size: 18px;
+        transition: color 250ms;
+
+        &:hover {
+          color: var(--color-orange);
+        }
+      }
+
+      & + li {
+        margin-left: space(4);
+      }
+
+      &.is-btn {
+        > a {
+          @extend .wp-block-button__link;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
