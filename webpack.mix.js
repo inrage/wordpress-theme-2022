@@ -34,10 +34,6 @@ mix
   // Modules
   .sass('resources/styles/modules/project-item.scss', 'styles/modules')
   .sass('resources/styles/modules/article-item.scss', 'styles/modules')
-  .options({
-    processCssUrls: false,
-    postCss: [require('tailwindcss')],
-  });
 
 mix
   .js('resources/scripts/app.js', 'scripts')

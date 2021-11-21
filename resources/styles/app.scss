@@ -1,6 +1,4 @@
 @import "common/variables";
-@import 'tailwindcss/base';
-
 @import 'common/global';
 @import 'common/layout';
 @import "layouts/header";
@@ -8,9 +6,6 @@
 @import "blocks/button";
 @import "components/socials";
 @import "layouts/footer";
-
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 .progress-svg {
   position: relative;
