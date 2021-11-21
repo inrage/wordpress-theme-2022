@@ -1,6 +1,8 @@
-.offer-item {
-  @apply py-4;
+@import "../tools/functions";
 
+.offer-item {
+  padding-top: space(4);
+  padding-bottom: space(4);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,17 +20,15 @@
   }
 
   &__text {
-    @apply mb-2;
-
     flex: 1;
+    margin-bottom: space(2);
   }
 
   &__top {
     flex: none;
 
     @media (max-width: 600px) {
-      @apply mb-3;
-
+      margin-bottom: space(3);
       display: flex;
       align-items: center;
       text-align: left;
@@ -37,24 +37,26 @@
 
   &__image {
     @media (max-width: 600px) {
-      @apply mr-2;
-
       width: 88px;
       height: 88px;
+      margin-right: space(2);
     }
   }
 
   &__title {
-    @apply mt-1 md:mt-2 mb-1;
-
     color: var(--color-white);
     font-size: 20px;
+    margin-top: space(1);
+    margin-bottom: space(1);
+
+    @media (max-width: 769px) {
+      margin-top: space(2);
+    }
   }
 
   &__cta {
-    @apply mt-auto;
-
     flex: none;
+    margin-top: auto;
 
     a {
       color: var(--color-dark);
