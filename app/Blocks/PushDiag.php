@@ -19,6 +19,7 @@ class PushDiag extends AbstractBlock
         return [
             'bg_top_outer' => get_field('top_outer_bg'),
             'bg_bottom_outer' => get_field('bottom_outer_bg'),
+            'push_color' => get_field('push_color'),
             'bg_img' => get_field('bg_img') ? wp_get_attachment_image_url(get_field('bg_img'), 'full') : null,
         ];
     }
@@ -32,18 +33,31 @@ class PushDiag extends AbstractBlock
                 'label' => 'Image de fond',
                 'return_format' => 'id'
             ])
+            ->addSelect('push_color', [
+                'label' => 'Couleur des pushs',
+                'choices' => [
+                    'darker' => 'Darker',
+                    'dark' => 'Dark',
+                    'orange' => 'Orange'
+                ],
+                'default' => 'orange'
+            ])
             ->addChoiceField('top_outer_bg', 'select', [
+                'label' => 'BG Top',
                 'choices' => [
                     'darker' => 'Darker',
                     'dark' => 'Dark',
-                ]
-            ])->setLabel('BG Top')
+                ],
+                'default' => 'dark'
+            ])
             ->addChoiceField('bottom_outer_bg', 'select', [
+                'label' => 'BG Bottom',
                 'choices' => [
                     'darker' => 'Darker',
                     'dark' => 'Dark',
-                ]
-            ])->setLabel('BG Bottom');
+                ],
+                'default' => 'dark'
+            ]);
 
         return $pushDiag->build();
     }

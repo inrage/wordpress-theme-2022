@@ -4,7 +4,7 @@
   --push-diag-bg: var(--color-darker);
   --push-diag-outer-top-bg: var(--color-dark);
   --push-diag-outer-bottom-bg: var(--color-dark);
-  --push-diag-corner-color: var(--color-orange);
+  --push-diag-outer-push-bg: var(--color-orange);
 
   background: var(--push-diag-bg) no-repeat center;
   background-size: cover;
@@ -32,7 +32,7 @@
     }
 
     &-corner {
-      fill: var(--push-diag-corner-color);
+      fill: var(--push-diag-outer-push-bg);
     }
   }
 
@@ -42,7 +42,7 @@
     }
 
     &-corner {
-      fill: var(--push-diag-corner-color);
+      fill: var(--push-diag-outer-push-bg);
     }
   }
 
@@ -57,8 +57,8 @@
     }
   }
 
-  $positions: top, bottom;
-  $colors: dark, darker;
+  $positions: top, bottom, push;
+  $colors: dark, darker, orange;
 
   @each $pos in $positions {
     &--#{$pos} {
