@@ -3,7 +3,7 @@
 .wp-block-text-image {
   display: flex;
   align-items: center;
-  margin: space(8) 0;
+  padding: space(8) 0;
 
   &__image {
     flex: none;
@@ -18,14 +18,17 @@
   }
 
   &__content {
-    padding-left: space(3);
+    padding-left: space(6);
   }
 
   @media (min-width: 769px) {
     &--inverse {
       flex-direction: row-reverse;
-      padding-left: 0;
-      padding-right: space(3);
+
+      .wp-block-text-image__content {
+        padding-left: 0;
+        padding-right: space(3);
+      }
     }
   }
 }

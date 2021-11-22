@@ -179,6 +179,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    add_theme_support( 'yoast-seo-breadcrumbs' );
 }, 20);
 
 /**

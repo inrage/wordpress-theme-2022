@@ -4,6 +4,13 @@
   background: url(../images/iledere-pont.jpg) var(--color-dark) no-repeat center top;
   background-size: cover;
 
+  &-title {
+    font-size: 38px;
+    color: var(--color-white);
+    font-weight: bold;
+    letter-spacing: 0.02em;
+  }
+
   &__toggler {
     background: var(--color-primary);
     border: 0;
@@ -241,11 +248,8 @@
       a,
       span {
         display: inline;
-        color: #fff;
-      }
-
-      a {
-        text-decoration: underline;
+        color: darken(#fff, 30%);
+        text-transform: uppercase;
       }
     }
 

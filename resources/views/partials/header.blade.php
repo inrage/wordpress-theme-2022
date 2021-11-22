@@ -35,9 +35,10 @@
         <span class="header__main__title--primary">inRage</span>
         <span class="header__main__title--secondary">Pascal GAULT</span>
         <span class="header__main__title--function">
-     Développeur Freelance spécialisé dans<br>la création de sites web
-    </span>
+         Développeur Freelance spécialisé dans<br>la création de sites web
+        </span>
       </h1>
+      <button class="scroll-to" data-href="#main-content" aria-label="Scroll to content"></button>
     @elseif(basename(get_page_template_slug()) == 'tma-detail.blade.php')
       <h1 class="header__main__title header__main__title--inner">
         <span class="header__main__title--secondary">{{ get_field('page_title') }}</span>
@@ -48,12 +49,13 @@
           Demande de devis
         </a>
       </div>
+      <button class="scroll-to" data-href="#main-content" aria-label="Scroll to content"></button>
     @else
-      <div class="header__main__title header__main__title--inner">
-        <h1 class="header__main__title--secondary">{!! get_the_title() !!}</h1>
+      <div class="container">
+        <h1 class="header-title">{!! get_the_title() !!}</h1>
+        {!! yoast_breadcrumb( '<p class="header__main__breadcrumbs">','</p>', false ); !!}
       </div>
     @endif
-    <button class="scroll-to" data-href="#main-content" aria-label="Scroll to content"></button>
   </div>
   @if(!is_404())
     <div class="header__bottom">
