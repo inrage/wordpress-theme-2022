@@ -1,0 +1,31 @@
+@import "../tools/functions";
+
+.wp-block-text-image {
+  display: flex;
+  align-items: center;
+  margin: space(8) 0;
+
+  &__image {
+    flex: none;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > img {
+      max-height: 100%;
+    }
+  }
+
+  &__content {
+    padding-left: space(3);
+  }
+
+  @media (min-width: 769px) {
+    &--inverse {
+      flex-direction: row-reverse;
+      padding-left: 0;
+      padding-right: space(3);
+    }
+  }
+}
