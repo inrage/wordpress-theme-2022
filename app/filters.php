@@ -59,3 +59,12 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 // Do not load the WPCF7 scripts and styles on the frontend
 add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
+add_filter('wp_nav_menu_objects', function ($items, $args) {
+    foreach ($items as &$item) {
+        if ($imageField = get_field('image', $item)) {
+            $item->title = wp_get_attachment_image($imageField, 'thumbnail');
+            $item->classes[] = 'menu-item-image';
+        }
+    }
+    return $items;
+}, 10, 2);
