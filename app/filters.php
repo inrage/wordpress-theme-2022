@@ -33,7 +33,7 @@ add_filter('post_type_link', function ($post_link, $id = 0) {
  * Allow only some default blocks in the editor.
  * Retrieve all created ACF Blocks Types and inject them into the allowed blocks array.
  */
-add_filter('allowed_block_types_all', function($allowed_blocks) {
+add_filter('allowed_block_types_all', function ($allowed_blocks) {
     return array_merge([
         'core/image',
         'core/paragraph',
@@ -57,8 +57,9 @@ add_filter('allowed_block_types_all', function($allowed_blocks) {
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 // Do not load the WPCF7 scripts and styles on the frontend
-add_filter( 'wpcf7_load_js', '__return_false' );
-add_filter( 'wpcf7_load_css', '__return_false' );
+add_filter('wpcf7_load_js', '__return_false');
+add_filter('wpcf7_load_css', '__return_false');
+
 add_filter('wp_nav_menu_objects', function ($items, $args) {
     foreach ($items as &$item) {
         if ($imageField = get_field('image', $item)) {
