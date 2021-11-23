@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   </head>
 
-  <body <?php body_class(); ?>>
+  <body <?php body_class('no-js'); ?>>
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
     <div id="app">
-      <?php echo \Roots\view(\Roots\app('sage.view'), \Roots\app('sage.data'))->render(); ?>
+      <?php echo view(app('sage.view'), app('sage.data'))->render(); ?>
     </div>
 
     <?php do_action('get_footer'); ?>
