@@ -32,6 +32,7 @@ mix
   .sass('resources/styles/blocks/job-item.scss', 'styles/blocks')
   .sass('resources/styles/blocks/floating-image.scss', 'styles/blocks')
   .sass('resources/styles/blocks/text-image.scss', 'styles/blocks')
+  .sass('resources/styles/blocks/quote.scss', 'styles/blocks')
   // Modules
   .sass('resources/styles/modules/project-item.scss', 'styles/modules')
   .sass('resources/styles/modules/article-item.scss', 'styles/modules')

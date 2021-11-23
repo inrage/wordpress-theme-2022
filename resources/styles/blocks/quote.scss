@@ -1,0 +1,31 @@
+.wp-block-quote {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 34px;
+  color: #fff;
+  letter-spacing: 1.7px;
+  font-style: italic;
+  margin-top: -160px;
+  margin-bottom: -160px;
+
+  &:before {
+    position: absolute;
+    left: -56px;
+    top: -30px;
+    height: 73px;
+    width: 92px;
+    background: url(../../images/svg/icon-quote.svg) no-repeat center;
+    background-size: cover;
+    content: "";
+    display: block;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  p {
+    position: relative;
+  }
+}
