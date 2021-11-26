@@ -1,3 +1,5 @@
+@import "../tools/functions";
+
 // Variables
 // ==================
 :root {
@@ -13,5 +15,3 @@
   --font-family-base: "Open Sans", sans-serif;
   --font-family-secondary: "Lato", sans-serif;
 }
-
-@import "../tools/functions";

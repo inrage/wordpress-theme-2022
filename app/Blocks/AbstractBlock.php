@@ -4,6 +4,7 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use function Roots\asset;
+use function Roots\bundle;
 
 abstract class AbstractBlock extends Block
 {
@@ -28,13 +29,11 @@ abstract class AbstractBlock extends Block
 
     public function enqueue(): void
     {
-        if (asset('styles/blocks/' . $this->slug . '.css')->exists()) {
-            wp_enqueue_style(
-                'blocks/' . $this->slug . '.css',
-                asset('styles/blocks/' . $this->slug . '.css')->uri(),
-                false,
-                null
-            );
+        echo '<pre>';
+        print_r(asset($this->slug . '.css')->exists());
+        echo '</pre>';
+        if (asset($this->slug . '.css')->exists()) {
+            bundle($this->slug)->enqueue();
         }
     }
 

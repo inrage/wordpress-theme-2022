@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4df968bdd8833f45b351dcb7d6332d16",
+    "content-hash": "0381840e445329fc1cea02d83ef95ef1",
     "packages": [
         {
             "name": "brick/math",
@@ -2134,16 +2134,16 @@
         },
         {
             "name": "roots/acorn",
-            "version": "v2.0.0-beta.4",
+            "version": "v2.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/acorn.git",
-                "reference": "9415b473ba8df1100e41b8e80ad4d09ae57a889b"
+                "reference": "9af5ffff189abd09436d4280df13c620675252a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/acorn/zipball/9415b473ba8df1100e41b8e80ad4d09ae57a889b",
-                "reference": "9415b473ba8df1100e41b8e80ad4d09ae57a889b",
+                "url": "https://api.github.com/repos/roots/acorn/zipball/9af5ffff189abd09436d4280df13c620675252a3",
+                "reference": "9af5ffff189abd09436d4280df13c620675252a3",
                 "shasum": ""
             },
             "require": {
@@ -2191,7 +2191,8 @@
                     "Illuminate\\": "src/Illuminate/"
                 },
                 "files": [
-                    "src/Roots/helpers.php"
+                    "src/Roots/helpers.php",
+                    "src/Roots/globals.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2217,7 +2218,7 @@
             "support": {
                 "forum": "https://discourse.roots.io/",
                 "issues": "https://github.com/roots/acorn/issues",
-                "source": "https://github.com/roots/acorn/tree/v2.0.0-beta.4"
+                "source": "https://github.com/roots/acorn/tree/v2.0.0-beta.5"
             },
             "funding": [
                 {
@@ -2229,7 +2230,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-11-19T19:29:06+00:00"
+            "time": "2021-11-21T09:51:34+00:00"
         },
         {
             "name": "roots/support",
@@ -4629,7 +4630,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"

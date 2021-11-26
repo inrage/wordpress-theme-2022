@@ -1,5 +1,4 @@
 @import "../tools/functions";
-@import "button";
 
 .wpcf7 {
   margin: space(5) 0;
@@ -45,8 +44,6 @@
   }
 
   &-submit {
-    @extend .wp-block-button__link;
-
     transition: padding-right 0.2s linear;
 
     &:hover {
@@ -128,10 +125,6 @@
         border-color: var(--color-orange);
         box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(230 126 34 / 60%);
         outline: 0;
-      }
-
-      &::placeholder {
-        color: darken(#999, 20%);
       }
 
       &.wpcf7-not-valid {

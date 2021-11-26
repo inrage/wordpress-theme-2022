@@ -22,8 +22,6 @@
 
       &.is-btn {
         > a {
-          @extend .wp-block-button__link;
-
           &:hover {
             color: #fff;
           }
