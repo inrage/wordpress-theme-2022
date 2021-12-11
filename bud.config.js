@@ -39,7 +39,7 @@ module.exports = async (config) =>
      * These files should be processed as part of the build
      * even if they are not explicitly imported in application assets.
      */
-    .assets(['images/**/*.{png,gif,jpg,svg}'])
+    .assets(['resources/images'])
 
     .use([
       require('@roots/bud-postcss'),

@@ -1,7 +1,7 @@
 .header {
   @extend %fullsize;
 
-  background: url(../images/iledere-pont.jpg) var(--color-dark) no-repeat center top;
+  background: url(../../images/iledere-pont.jpg) var(--color-dark) no-repeat center top;
   background-size: cover;
 
   &-title {
@@ -256,7 +256,7 @@
       width: 45px;
       height: 26px;
       position: relative;
-      background: url(../images/header__scroll.png) no-repeat center center;
+      background: url(../../images/header__scroll.png) no-repeat center center;
       content: "";
       display: block;
       animation: scrollToBounce 1s ease infinite;

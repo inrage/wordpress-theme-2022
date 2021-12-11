@@ -29,9 +29,6 @@ abstract class AbstractBlock extends Block
 
     public function enqueue(): void
     {
-        echo '<pre>';
-        print_r(asset($this->slug . '.css')->exists());
-        echo '</pre>';
         if (asset($this->slug . '.css')->exists()) {
             bundle($this->slug)->enqueue();
         }
