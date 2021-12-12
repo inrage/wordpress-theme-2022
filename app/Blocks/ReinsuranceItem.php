@@ -23,7 +23,7 @@ class ReinsuranceItem extends AbstractBlock
     public function with(): array
     {
         return [
-            'icon' => get_svg('images/svg/' . get_field('icon')),
+            'icon' => get_svg('svg/' . get_field('icon')),
             'number' => get_field('number') ?: $this->example['number'],
             'title' => get_field('title') ?: $this->example['title'],
         ];
