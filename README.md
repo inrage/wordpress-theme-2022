@@ -10,7 +10,7 @@ This version of the theme is compatible with the Full site editing of Wordpress 
 | ------- | ------ | ----------- | ---------- | 
 | 2022 | master | 8.0 or greater | 5.8.2 |
 
-Currently based on Sage 10 at the commit [e533e1bd1513790431d9a4fa049458524be7439e](https://github.com/roots/sage/commit/e533e1bd1513790431d9a4fa049458524be7439e)
+Currently based on Sage 10 at the commit [26ff3fa9ffbc0a4e76f17440d50d10a2bbc601cb](https://github.com/roots/sage/commit/26ff3fa9ffbc0a4e76f17440d50d10a2bbc601cb)
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Currently based on Sage 10 at the commit [e533e1bd1513790431d9a4fa049458524be743
 - **WordPress** >= 5.8.1
 - **PHP** >= 8.0 (with php-mbstring enabled)
 - **Composer** 2.0 or greater
-- **Node** 14 or 16 (prefered)
+- **Node** 16
 - **Yarn**
 - You also need **Advanced Custom Fields Pro**
 
@@ -41,15 +41,10 @@ And install node dependencies and build this project in production mode:
 
 ```shell
 yarn
-yarn build:production
+yarn build
 ```
 
 ## Assets build commands
 
-For the moment, this theme is based on Laravel Mix. 
-
-We will use [roots/bud](https://github.com/roots/bud) when it will be [available on Sage 10](https://github.com/roots/sage/pull/2643).
-
-- `yarn start` — Compile assets when file changes are made, start Browsersync session
-- `yarn build` — Compile and optimize the files in your assets directory
-- `yarn build:production` — Compile assets for production
+- `yarn dev` — Compile assets when file changes are made, start Browsersync session
+- `yarn build` — Compile and optimize the files for production
