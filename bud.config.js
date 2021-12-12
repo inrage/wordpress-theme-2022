@@ -18,12 +18,12 @@ module.exports = async (config) =>
       // Blocks
       'section-title': 'styles/blocks/section-title.scss',
       'offer-item': 'styles/blocks/offer-item.scss',
-      //'push-diag': 'styles/blocks/push-diag.scss',
+      'push-diag': 'styles/blocks/push-diag.scss',
       'button': 'styles/blocks/button.scss',
-      //'show-all': 'styles/blocks/show-all.scss',
+      'show-all': 'styles/blocks/show-all.scss',
       'expertise-item': 'styles/blocks/expertise-item.scss',
       'reinsurance-item': 'styles/blocks/reinsurance-item.scss',
-      //'query-list': 'styles/blocks/query-list.scss',
+      'query-list': 'styles/blocks/query-list.scss',
       'contact-form': 'styles/blocks/contact-form.scss',
       'job-item': 'styles/blocks/job-item.scss',
       'floating-image': 'styles/blocks/floating-image.scss',
@@ -31,8 +31,8 @@ module.exports = async (config) =>
       'quote': 'styles/blocks/quote.scss',
 
       // Modules
-      //'project-item': 'styles/modules/project-item.scss',
-      //'article-item': 'styles/modules/article-item.scss',
+      'project-item': 'styles/modules/project-item.scss',
+      'article-item': 'styles/modules/article-item.scss',
     })
 
     /**

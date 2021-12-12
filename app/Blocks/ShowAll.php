@@ -6,7 +6,7 @@ use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 use function Roots\asset;
 
-class ShowAll extends Block
+class ShowAll extends AbstractBlock
 {
     public $name = 'Show All';
     public $description = 'A simple Show All block.';
@@ -85,10 +85,5 @@ class ShowAll extends Block
         ]);
 
         return $showAll->build();
-    }
-
-    public function enqueue(): void
-    {
-        wp_enqueue_style('blocks/show-all.css', asset('styles/blocks/show-all.css')->uri(), false, null);
     }
 }

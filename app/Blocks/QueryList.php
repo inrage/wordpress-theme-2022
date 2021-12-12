@@ -4,7 +4,9 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
+
 use function Roots\asset;
+use function Roots\bundle;
 
 class QueryList extends AbstractBlock
 {
@@ -28,13 +30,8 @@ class QueryList extends AbstractBlock
     {
         $postTypeStyle = self::ALLOWED_POST_TYPES[get_field('post_type')]['style'];
 
-        if (asset('styles/modules/' . $postTypeStyle . '.css')->exists()) {
-            wp_enqueue_style(
-                'modules/' . $postTypeStyle . '.css',
-                asset('styles/modules/' . $postTypeStyle . '.css')->uri(),
-                false,
-                null
-            );
+        if (asset($postTypeStyle . '.css')->exists()) {
+            bundle($postTypeStyle)->enqueue();
         }
 
         return [
