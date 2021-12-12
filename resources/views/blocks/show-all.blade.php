@@ -5,7 +5,7 @@
   </svg>
   @if($show_link === true)
     <a class="wp-block-show-all__cta" href="https://www.inrage.fr/portfolio/">
-      @svg('images.svg.icon-more')
+      @svg('svg.icon-more')
       {!! $label !!}
     </a>
   @endif
